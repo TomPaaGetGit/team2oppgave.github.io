@@ -7,13 +7,48 @@
     <title>Document</title>
 </head>
 <style>
+   @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+    *
+
+    {
+        font-family: 'DotGothic16', sans-serif;
+    }
     div {
-        background-color: blue;
+        background-color: rgb(1, 178, 184);
+    }
+    body {
+        background-color: #111;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        font-size: 18px;
+        font-weight: bold;
+        
+    }
+    button {
+        margin-left: 30px;
+        background-color: #fe1a6ee1;
+        font-size: 18px;
+        border-radius: 80%;
+        border: solid 3px;
+    }
+    .button1 {
+        margin-left: 150px;
+    }
+    .button2 {
+        margin-left: 50px;
+    }
+    .button3 {
+        margin-left: 150px;
+    }
+    span {  
+        color: #fe1a6ee1;
+        font-weight: bolder;
     }
 </style>
 <body>
     <div id="app"></div>
-
     <script>
         //Model
             var ord1 = '_____';
@@ -23,74 +58,116 @@
             var ord5 = '_____';
             var ord6 = '_____';
             var ord7 = '_____';
+            var rockCode = '';
+            var gf = '';
+            var chat = 'buying gf 10k';
         //View
             function updateView() {
                 document.getElementById('app').innerHTML = `
-                <div>Vi kicka igang prosjektet med at den ${ord1} Tom
-                 med sin  ${ord2} personlighet lagde et oppsett. 
-                 Mens den ${ord3} Dani så på med sine ${ord4}  øyne. 
-                 Kim holdt må med sine egne ${ord5} ting. 
-                 Kristian følte seg litt ${ord6} og Adrian klasket på sitt 
-                ${ord7} tastatur for å bli ferdig.</div>
+                <button onclick=addOrd1('drive')>fantastiske</button>
+                <button onclick=addOrd1('dumme')>dumme</button>
 
-                <button class onclick=addOrd1('Fantastiske')>Test1</button>
-                <button onclick=addOrd1('Dumme')>Test2</button>
+                <button class="button1" onclick=addOrd2('power')>falske</button>
+                <button onclick=addOrd2('fine?')>fine?</button>
                 <br>
 
-                <button onclick=addOrd2('falske')>Test1</button>
-                <button onclick=addOrd2('Fine?')>Test2</button>
+                <p>Vi kicka igang prosjektet med at den <span>${ord1}</span> Tom
+                 med sin <span>${ord2}</span> personlighet lagde et oppsett.</p>
+                <br>
+                <button onclick=addOrd3('hungry')>smellfeite</button>
+                <button onclick=addOrd3('kjekke')>kjekke</button>
+
+                <button class="button2" onclick=addOrd4('devouer')>nylakkerte</button>
+                <button onclick=addOrd4('feilplasserte')>feilplasserte</button>
                 <br>
 
-                <button onclick=addOrd3('smellfeite')>Test1</button>
-                <button onclick=addOrd3('kjekke')>Test2</button>
+                <p>Mens den <span>${ord3}</span> Dani så på med sine <span>${ord4}</span> øyne.</p>
+                <br>
+                <button onclick=addOrd5('egoistiske')>egoistiske</button>
+                <button onclick=addOrd5('muskuløse')>muskuløse</button>
                 <br>
 
-                <button onclick=addOrd4('nylakkerte')>Test1</button>
-                <button onclick=addOrd4('feilplasserte')>Test2</button>
-                <br>
-                
-                <button onclick=addOrd5('egoistiske')>Test1</button>
-                <button onclick=addOrd5('muskuløse')>Test2</button>
-                <br>
-                
-                <button onclick=addOrd6('svimmel')>Test1</button>
-                <button onclick=addOrd6('forelsket')>Test2</button>
-                <br>
+                <p>Kim holdt må med sine egne <span>${ord5}</span> ting.</p>
+                <br> 
+                <button onclick=addOrd6('svimmel')>svimmel</button>
+                <button onclick=addOrd6('forelsket')>forelsket</button>
 
-                <button onclick=addOrd7('nuddelfylte')>Test1</button>
-                <button onclick=addOrd7('muggete')>Test2</button>
+                <button class="button3" onclick=addOrd7('nuddelfylte')>nuddelfylte</button>
+                <button onclick=addOrd7('muggete')>muggete</button>
+
+                <p>Kristian følte seg litt <span>${ord6}</span> og Adrian klasket på sitt 
+                <span>${ord7}</span> tastatur for å bli ferdig.</p>
+
+                <span><a href="https://youtu.be/OjKJUcic8k4?t=987" target="_blank" style="color:white">${gf}</a></span>
+                <span style="color:yellow" onclick=buygf()>${chat}</span>
+                <p onclick=checkRockCode()> <img src="https://i.imgur.com/yIILRqi.png" width="120" height="140"> </p>
                 `;
             }
+            updateView();
         //Controller
-        updateView();
-
         function addOrd1(clicked) {
                 ord1 = clicked;
+                rockCode += clicked;
                 updateView();
             }
+
         function addOrd2(clicked) {
                 ord2 = clicked;
+                rockCode += clicked;
                 updateView();
             }
+
         function addOrd3(clicked) {
                 ord3 = clicked;
+                rockCode += clicked;
                 updateView();
             }
+
         function addOrd4(clicked) {
                 ord4 = clicked;
+                rockCode += clicked;
                 updateView();
+                checkRockCode();
             }
+
         function addOrd5(clicked) {
                 ord5 = clicked;
                 updateView();
             }
+
             function addOrd6(clicked) {
                 ord6 = clicked;
                 updateView();
             }
+
             function addOrd7(clicked) {
                 ord7 = clicked;
                 updateView();
+            }
+
+            function buygf() {
+                gf = `
+                ⠄⣾⣿⠿⠿⠶⠿⢿⣿⣿⣿⣿⣦⣤⣄⢀⡅⢠⣾⣛⡉⠄⠄⠄⠸⢀⣿⠄ <br>
+                ⢀⡋⣡⣴⣶⣶⡀⠄⠄⠙⢿⣿⣿⣿⣿⣿⣴⣿⣿⣿⢃⣤⣄⣀⣥⣿⣿⠄<br>
+                ⢸⣇⠻⣿⣿⣿⣧⣀⢀⣠⡌⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⣿⣿⣿⠄<br>
+                ⢸⣿⣷⣤⣤⣤⣬⣙⣛⢿⣿⣿⣿⣿⣿⣿⡿⣿⣿⡍⠄⠄⢀⣤⣄⠉⠋⣰<br>
+                ⣖⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⢇⣿⣿⡷⠶⠶⢿⣿⣿⠇⢀⣤ <br>
+                ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣷⣶⣥⣴⣿⡗<br>
+                ⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄<br>
+                ⣦⣌⣛⣻⣿⣿⣧⠙⠛⠛⡭⠅⠒⠦⠭⣭⡻⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄<br>
+                ⣿⣿⣿⣿⣿⣿⣿⡆⠄⠄⠄⠄⠄⠄⠄⠄⠹⠈⢋⣽⣿⣿⣿⣿⣵⣾⠃⠄<br>
+                ⣿⣿⣿⣿⣿⣿⣿⣿⠄⣴⣿⣶⣄⠄⣴⣶⠄⢀⣾⣿⣿⣿⣿⣿⣿⠃⠄⠄ <br>
+                ⠈⠻⣿⣿⣿⣿⣿⣿⡄⢻⣿⣿⣿⠄⣿⣿⡀⣾⣿⣿⣿⣿⣛⠛⠁⠄⠄⠄<br>
+                ⠄⠄⠈⠛⢿⣿⣿⣿⠁⠞⢿⣿⣿⡄⢿⣿⡇⣸⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄<br>
+                ⠄⠄⠄⠄⠄⠉⠻⣿⣿⣾⣦⡙⠻⣷⣾⣿⠃⠿⠋⠁⠄⠄⠄⠄⠄⢀⣠⣴<br>
+                ⣿⣶⣶⣮⣥⣒⠲⢮⣝⡿⣿⣿⡆⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣠`
+                chat = '';
+                updateView();
+            }
+            function checkRockCode() {
+                if (rockCode == 'drivepowerhungrydevouer') {
+                    document.getElementById('app').innerHTML = window.location.assign('https://www.youtube.com/watch?v=C0SjUfzl04c')
+                }
             }
     </script>
     <!--altvitende, attraktive, pastøse, brede, dumme, ekle, falske, følsomme, harde, uavhengige.-->
